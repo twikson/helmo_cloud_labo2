@@ -32,7 +32,7 @@ jobs:
          docker build -f ./Dockerfile .
       - name: pythonTestHelloWorld
         run: |
-         python3 helloworld.py
-      - uses: azure/container-scan@v0
+         python3 helloworld.py  
+      - uses: azure/docker-login@v1
         with:
-         image-name: python:3
+          login-server: 'cloud3dock.azurecr.io'
