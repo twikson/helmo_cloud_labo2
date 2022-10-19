@@ -35,4 +35,4 @@ jobs:
          python3 helloworld.py
       - uses: azure/container-scan@v0
         with:
-         image-name: ubuntu-latest
+         image-name: python:3
