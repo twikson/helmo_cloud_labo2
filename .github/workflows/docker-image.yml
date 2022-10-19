@@ -36,6 +36,6 @@ jobs:
       - name: Login to the Container Registry  
         uses: azure/docker-login@v1
         with:
-          login-server: ${{ secrets.ACR_LOGIN_SERVER }}
-          username: ${{ secrets.REGISTRY_USERNAME }}
-          password: ${{ secrets.REGISTRY_PASSWORD }}
+          login-server: "cloud3dock.azurecr.io"
+          username: "cloud3dock"
+          password: "F/1dE1YG00Pe4Veh0Akuc3tU2HTs+CBC"
