@@ -32,7 +32,10 @@ jobs:
          docker build -f ./Dockerfile .
       - name: pythonTestHelloWorld
         run: |
-         python3 helloworld.py  
+         python3 helloworld.py
+      - name: Push image
+        run: |
+          docker push ${{ secrets.ACR_LOGIN_SERVER }}/spring-petclinic:${{ github.run_number }}
       - uses: azure/container-scan@v0
         with:
           image-name: python:latest
