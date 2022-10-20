@@ -50,3 +50,7 @@ jobs:
           image-name: sheesh:${{ github.run_number }}
           severity-threshold: CRITICAL
           run-quality-checks: true
+
+      - name: Push image
+        run: |
+          docker push ${{ secrets.ACR_LOGIN_SERVER }}/sheesh:${{ github.run_number }}
