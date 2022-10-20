@@ -37,7 +37,7 @@ jobs:
 # Build and tag
       - name: Build and Tag image
         run: |
-          docker build -f ./Dockerfile -t sheesh:${{ github.run_number }} . 
+          docker build -f ./Dockerfile -t ${{ secrets.ACR_LOGIN_SERVER }}/spring-petclinic:${{ github.run_number }} .
 # Test script python
       - name: pythonTestHelloWorld
         run: |
