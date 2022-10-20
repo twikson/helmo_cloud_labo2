@@ -50,7 +50,7 @@ jobs:
           image-name: sheesh:${{ github.run_number }}
           severity-threshold: CRITICAL
           run-quality-checks: true
-
+# Push
       - name: Push image
         run: |
           docker push sheesh:${{ github.run_number }}
