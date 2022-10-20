@@ -43,4 +43,10 @@ jobs:
         run: |
          python3 helloworld.py
          
-
+# Scan Image
+      - name: Scan image
+        uses: Azure/container-scan@v0
+        with:
+          image-name: sheesh:${{ github.run_number }}}
+          severity-threshold: CRITICAL
+          run-quality-checks: true
